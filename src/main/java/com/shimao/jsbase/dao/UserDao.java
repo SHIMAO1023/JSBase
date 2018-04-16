@@ -1,10 +1,10 @@
-package com.shimao.jsbase.repository;
+package com.shimao.jsbase.dao;
 
 import com.shimao.jsbase.entity.User;
 
 import java.util.List;
 
-public interface UserRepository {
+public interface UserDao {
 
     List<User>getAll();
 
