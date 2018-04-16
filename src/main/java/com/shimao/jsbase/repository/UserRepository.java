@@ -1,19 +1,17 @@
 package com.shimao.jsbase.repository;
 
 import com.shimao.jsbase.entity.User;
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.stereotype.Component;
 
-@Component
-public class UserRepository {
+import java.util.List;
 
-    private final SqlSession sqlSession;
+public interface UserRepository {
 
-    public UserRepository(SqlSession sqlSession) {
-        this.sqlSession = sqlSession;
-    }
+    List<User>getAll();
 
-    public User getUserById(int id) {
-        return this.sqlSession.selectOne("selectUserById", id);
-    }
+    int insert(User user);
+
+    int update(User user);
+
+    int delete(int id);
+
 }
