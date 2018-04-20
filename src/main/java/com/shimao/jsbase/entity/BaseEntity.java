@@ -12,6 +12,30 @@ public class BaseEntity {
 
     private long updateTime;
 
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean isActive) {
+        isActive = isActive;
+    }
+
+    public long getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(long createTime) {
+        this.createTime = createTime;
+    }
+
+    public long getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(long updateTime) {
+        this.updateTime = updateTime;
+    }
+
     void createNew() {
         this.isActive = true;
         this.createTime = System.currentTimeMillis();
